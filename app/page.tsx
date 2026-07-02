@@ -153,7 +153,7 @@ export default function Home() {
             <h2 className="capitalize font-semibold text-center">Welcome to notifins</h2>
             
             <div className="flex flex-col items-center justify-center gap-3">
-                <p>You can receive notifications at any time!</p>
+                <p className="text-center">You can receive notifications at any time!</p>
                 {
                     endpoint ? 
                     <Button onClick={handleSendNotification} className="p-5 capitalize cursor-pointer text-white">Recieve notification</Button>

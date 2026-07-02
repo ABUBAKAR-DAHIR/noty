@@ -9,6 +9,7 @@ import ProfileCard from "@/components/ProfileCard";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import SvgLogo from "@/public/svg-logo";
 import { Toaster } from "@/components/ui/sonner";
+import Image from "next/image";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -48,8 +49,11 @@ export default function RootLayout({
             <TooltipProvider>
               <>
               {/* Header */}
-              <div className="w-full flex justify-around py-4 items-center">
-                <SvgLogo width={300} height={70}/>
+              <div className="w-full flex justify-around py-4 items-center max-sm:justify-between max-sm:px-4">
+                {/* <SvgLogo width={170} height={70}/> */}
+                <div className="relative size-30 max-sm:size-25">
+                    <Image src={"/faviicon.svg"} alt="logo" fill/>
+                </div>
                 <div className="flex gap-4 items-center">
                   <Themer />
                   <ProfileCard />
