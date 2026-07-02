@@ -158,7 +158,7 @@ export default function Home() {
                     endpoint ? 
                     <Button onClick={handleSendNotification} className="p-5 capitalize cursor-pointer text-white">Recieve notification</Button>
                     :
-                    <Button onClick={registerServiceWorker} className="p-5 capitalize cursor-pointer text-white">Allow notifications</Button>
+                    <Button onClick={registerServiceWorker} disabled={saveSubscriptionMutation.isPending} className="p-5 capitalize cursor-pointer text-white">{saveSubscriptionMutation.isPending ? "Saving subscription" : "Allow notifications"}</Button>
                 }
             </div>
         </div>
