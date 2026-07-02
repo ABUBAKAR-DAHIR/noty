@@ -27,6 +27,8 @@ function ProfileCard() {
         </div>
     </div>  
   )
+
+  if(!user && !isLoading) return
   
 
   return (
